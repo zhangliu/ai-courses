@@ -7,9 +7,11 @@ folder_path = f"{os.path.dirname(__file__)}/assets/mp3/"
 # 获取文件夹下所有的文件名
 file_list = os.listdir(folder_path)
 
+# 删除错误文件
 for file_name in file_list:
     isMp3 = re.match('.*\.mp3$', file_name) != None
-    # print(isMp3, 'xxxxxxxxxxxx')
+    file_path = os.path.join(folder_path, file_name)
+    if not isMp3: os.remove(file_path)
 
 # 遍历文件名,进行重命名操作
 for index, file_name in enumerate(file_list):
