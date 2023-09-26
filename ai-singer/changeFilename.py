@@ -1,6 +1,7 @@
 import os
 import re
 import shutil
+from pathlib import Path
 
 # 指定文件夹路径
 folder_path = f"{os.path.dirname(__file__)}/assets/mp3/"
@@ -16,10 +17,12 @@ for file_name in file_list:
 # 遍历文件名,进行重命名操作
 for index, file_name in enumerate(file_list):
     isStartsWithNumber = re.match('^\d+', file_name) != None
-    if isStartsWithNumber: continue
+    # if isStartsWithNumber: continue
 
     # 定义新文件名
-    new_name = f'{index}.{file_name}'
+    suffix = Path(file_name).suffix
+    new_name = f'{index}{suffix}'
+
     # 拼接完整文件路径
     old_file_path = os.path.join(folder_path, file_name)
     new_file_path = os.path.join(folder_path, new_name)
