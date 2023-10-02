@@ -1,5 +1,6 @@
 */assets/trim/
 */assets/slice/
 */assets/vocal/
-/tools/
+# /tools/
+*/so-vits-svc/
 .DS_Store
