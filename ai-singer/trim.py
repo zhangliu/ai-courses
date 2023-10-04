@@ -3,9 +3,6 @@ import ffmpeg;
 import os;
 import re;
 
-ffmpeg_path = os.path.abspath(f"{os.path.dirname(__file__)}/../tools/ffmpeg")
-ffprobe_path = os.path.abspath(f"{os.path.dirname(__file__)}/../tools/ffprobe")
-
 # 指定文件夹路径
 input_path = f"{os.path.dirname(__file__)}/assets/hxy-mp3/"
 output_path = f'{os.path.dirname(__file__)}/assets/trim/'

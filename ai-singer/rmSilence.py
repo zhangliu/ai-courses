@@ -3,11 +3,11 @@ import os;
 import re;
 import sys;
 
-ffmpeg_path = os.path.abspath(f"{os.path.dirname(__file__)}/../tools/ffmpeg")
-ffprobe_path = os.path.abspath(f"{os.path.dirname(__file__)}/../tools/ffprobe")
+# ffmpeg_path = os.path.abspath(f"{os.path.dirname(__file__)}/../tools/ffmpeg")
+# ffprobe_path = os.path.abspath(f"{os.path.dirname(__file__)}/../tools/ffprobe")
 
-sys.path.append(ffmpeg_path)
-sys.path.append(ffprobe_path)
+# sys.path.append(ffmpeg_path)
+# sys.path.append(ffprobe_path)
 
 def shell(command):
     if (os.system(command) != 0): exit(1)
